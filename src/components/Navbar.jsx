@@ -86,13 +86,13 @@ const Navbar = ()  =>{
             <FaPaintBrush /> Customize
           </NavLink>
 
-          <NavLink
+          {/* <NavLink
             to="/happyCustomers"
             onClick={() => setIsOpen(false)}
             className={linkClasses}
           >
             <FaSmile /> Happy Customers
-          </NavLink>
+          </NavLink> */}
         </div>
       )}
     </nav>
