@@ -213,40 +213,16 @@ export default function PremiumCandles() {
       category: "Trending",
     },
     {
-      id: 3,
-      name: "Yellow Flower Candle",
-      image:
-        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765557676/IMG-20251212-WA0008_y9xyql.jpg",
-      price: "N/A",
-      details: "CONTACT US for prize details and customization",
-      category: "Trending",
-    },
-    {
-      id: 4,
-      name: "Purple Flower Candle",
-      image:
-        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765557602/IMG-20251212-WA0009_urm25o.jpg",
-      price: "N/A",
-      details: "CONTACT US for prize details and customization",
-      category: "Trending",
-    },
-    {
       id: 5,
       name: "Set of 4 Flower Candles",
-      image:
+      images: [
         "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765557514/IMG-20251212-WA0007_eg1mmk.jpg",
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765557676/IMG-20251212-WA0008_y9xyql.jpg",
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765557602/IMG-20251212-WA0009_urm25o.jpg",
+      ],
       price: "N/A",
       details: "CONTACT US for prize details and customization",
       category: "Trending",
-    },
-    {
-      id: 6,
-      name: "TULIP CANDLE",
-      image:
-        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765557375/IMG-20251212-WA0013_j0bxbh.jpg",
-      price: "N/A",
-      details: "CONTACT US for prize details and customization",
-      category: "Frames",
     },
     {
       id: 7,
