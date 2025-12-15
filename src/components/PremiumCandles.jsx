@@ -191,9 +191,111 @@ export default function PremiumCandles() {
   /* ------------------ PRODUCTS ------------------ */
 
   const products = [
+    // the rest remain single-image products
     {
-      id: 13,
-      name: "3d Moon",
+      id: 1,
+      name: "Flower Candle",
+      image:
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765558898/IMG-20251212-WA0002_vhgbnm.jpg",
+      price: "N/A",
+      details: "CONTACT US for prize details and customization",
+      category: "Trending",
+    },
+    {
+      id: 2,
+      name: "Scented Daisy Candle Set of 4 ",
+      images: [
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765560061/IMG-20251212-WA0004_q3rrrm.jpg",
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765558525/IMG-20251211-WA0003_fcdidc.jpg",
+      ],
+      price: "N/A",
+      details: "CONTACT US for prize details and customization",
+      category: "Trending",
+    },
+    {
+      id: 3,
+      name: "Yellow Flower Candle",
+      image:
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765557676/IMG-20251212-WA0008_y9xyql.jpg",
+      price: "N/A",
+      details: "CONTACT US for prize details and customization",
+      category: "Trending",
+    },
+    {
+      id: 4,
+      name: "Purple Flower Candle",
+      image:
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765557602/IMG-20251212-WA0009_urm25o.jpg",
+      price: "N/A",
+      details: "CONTACT US for prize details and customization",
+      category: "Trending",
+    },
+    {
+      id: 5,
+      name: "Set of 4 Flower Candles",
+      image:
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765557514/IMG-20251212-WA0007_eg1mmk.jpg",
+      price: "N/A",
+      details: "CONTACT US for prize details and customization",
+      category: "Trending",
+    },
+    {
+      id: 6,
+      name: "TULIP CANDLE",
+      image:
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765557375/IMG-20251212-WA0013_j0bxbh.jpg",
+      price: "N/A",
+      details: "CONTACT US for prize details and customization",
+      category: "Frames",
+    },
+    {
+      id: 7,
+      name: "TULIP CANDLE BOUQUET",
+      image:
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765557219/IMG-20251212-WA0010_ecceqb.jpg",
+      price: "N/A",
+      details: "CONTACT US for prize details and customization",
+      category: "Trending",
+    },
+    {
+      id: 8,
+      name: "TULIP CANDLE",
+      image:
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765556699/IMG-20251212-WA0012_ezpo7z.jpg",
+      price: "N/A",
+      details: "CONTACT US for prize details and customization",
+      category: "Trending",
+    },
+    {
+      id: 9,
+      name: "TULIP CANDLE BOUQUET Set of 3",
+      image:
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765556695/IMG-20251212-WA0011_qhhdy9.jpg",
+      price: "N/A",
+      details: "CONTACT US for prize details and customization",
+      category: "Trending",
+    },
+    {
+      id: 10,
+      name: "Flower Candles Set of 3 ",
+      image:
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765556693/IMG-20251212-WA0014_hh8mm8.jpg",
+      price: "N/A",
+      details: "CONTACT US for prize `details` and customization",
+      category: "Trending",
+    },
+    {
+      id: 11,
+      name: "Flower Candle",
+      image:
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765556659/IMG-20251212-WA0016_laihkg.jpg",
+      price: "N/A",
+      details: "CONTACT US for prize details and customization",
+      category: "Trending",
+    },
+    {
+      id: 12,
+      name: "Scented Daisy Candle Set of 6",
       images: [
         "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765559911/IMG-20251212-WA0005_zih2hs.jpg",
         "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765559567/IMG-20251212-WA0005_m15694.jpg",
@@ -203,120 +305,13 @@ export default function PremiumCandles() {
       category: "Trending",
     },
     {
-      id: 14,
-      name: "HAND-MADE GIFT BOX",
+      id: 13,
+      name: "Secret Message candle",
       images: [
-        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765560061/IMG-20251212-WA0004_q3rrrm.jpg",
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765693352/WhatsApp_Image_2025-12-14_at_11.35.54_25299a2e_ob2pfw.jpg",
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765819577/WhatsApp_Image_2025-12-14_at_11.34.47_5ecf6e6a_v3u49w.jpg",
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765819682/WhatsApp_Image_2025-12-14_at_11.34.46_43521245_yxd1lq.jpg",
       ],
-      price: "N/A",
-      details: "CONTACT US for prize details and customization",
-      category: "Trending",
-    },
-
-    // the rest remain single-image products
-    {
-      id: 1,
-      name: "Mandala Art Key Chains",
-      image:
-        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765558898/IMG-20251212-WA0002_vhgbnm.jpg",
-      price: 60,
-      details:
-        "Each keychain costs 60/- rupees and Contact me for more quantity",
-      category: "Key Chains",
-    },
-    {
-      id: 2,
-      name: "Key chains",
-      image:
-        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765558525/IMG-20251211-WA0003_fcdidc.jpg",
-      price: 59,
-      details:
-        "Each keychain costs 59/- rupees and Contact me for more quantity",
-      category: "Key Chains",
-    },
-    {
-      id: 3,
-      name: "Key Chains",
-      image:
-        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765557676/IMG-20251212-WA0008_y9xyql.jpg",
-      price: 59,
-      details:
-        "Each keychain costs 59/- rupees and Contact me for more quantity",
-      category: "Key Chains",
-    },
-    {
-      id: 4,
-      name: "Key Chains",
-      image:
-        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765557602/IMG-20251212-WA0009_urm25o.jpg",
-      price: 59,
-      details:
-        "Each keychain costs 59/- rupees and Contact me for more quantity",
-      category: "Key Chains",
-    },
-    {
-      id: 5,
-      name: "Key Chains",
-      image:
-        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765557514/IMG-20251212-WA0007_eg1mmk.jpg",
-      price: 59,
-      details:
-        "Each keychain costs 59/- rupees and Contact me for more quantity",
-      category: "Key Chains",
-    },
-    {
-      id: 6,
-      name: "VINTAGE FRAMES",
-      image:
-        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765557375/IMG-20251212-WA0013_j0bxbh.jpg",
-      price: "N/A",
-      details: "CONTACT US for prize details and customization",
-      category: "Frames",
-    },
-    {
-      id: 7,
-      name: "3D MOON",
-      image:
-        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765557219/IMG-20251212-WA0010_ecceqb.jpg",
-      price: 500,
-      details:
-        "3d moon 6inch Wooden wall Moon light lamp Hand crafted 3d moon design",
-      category: "Trending",
-    },
-    {
-      id: 8,
-      name: "3D MOON",
-      image:
-        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765556699/IMG-20251212-WA0012_ezpo7z.jpg",
-      price: 1000,
-      details:
-        "3d moon 12inch Wooden wall Moon light lamp Hand crafted 3d moon design",
-      category: "Trending",
-    },
-    {
-      id: 9,
-      name: "3D MOON",
-      image:
-        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765556695/IMG-20251212-WA0011_qhhdy9.jpg",
-      price: 1250,
-      details:
-        "3d moon 15inch Wooden wall Moon light lamp Hand crafted 3d moon design",
-      category: "Trending",
-    },
-    {
-      id: 10,
-      name: "ROUND FRAME",
-      image:
-        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765556693/IMG-20251212-WA0014_hh8mm8.jpg",
-      price: "N/A",
-      details: "CONTACT US for prize details and customization",
-      category: "Trending",
-    },
-    {
-      id: 11,
-      name: "Square Frame 2",
-      image:
-        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1765556659/IMG-20251212-WA0016_laihkg.jpg",
       price: "N/A",
       details: "CONTACT US for prize details and customization",
       category: "Trending",
@@ -325,7 +320,10 @@ export default function PremiumCandles() {
 
   return (
     <div className="p-6 max-w-6xl mx-auto">
-      <h1 className="text-3xl font-bold text-center mb-8"> Premium Scented Candles</h1>
+      <h1 className="text-3xl font-bold text-center mb-8">
+        {" "}
+        Premium Scented Candles
+      </h1>
 
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
         {products.map((p) => {
