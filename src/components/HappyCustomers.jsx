@@ -1,120 +1,132 @@
+import { useEffect, useRef, useState } from "react";
 
-import React, { useState } from "react";
-
-const testimonials = [
+const cards = [
   {
     id: 1,
-    name: "Judith Black",
-    role: "CEO of Workcation",
+    title: "5 Things to See at the Forbidden City",
+    subtitle: "Explore the home of former emperors",
     image:
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800",
-    quote:
-      "Gravida quam mi erat tortor neque molestie. Auctor aliquet at porttitor a enim nunc suscipit tincidunt nunc. Et non lorem tortor posuere.",
+      "https://lh3.googleusercontent.com/ci/AL18g_Tam6R_IMJOp2_CA97RLkO9SyX97MItpiKFW-gugRAk6Z-piJ-JDWu8orlcJGnx8TDQDsJttwM=w800",
   },
   {
     id: 2,
-    name: "Alex Morgan",
-    role: "Founder of StudioX",
+    title: "Is 'The Kiss' Actually a Self-Portrait?",
+    subtitle: "Zoom into the painting with The Belvedere",
     image:
-      "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=800",
-    quote:
-      "Nunc eu scelerisque interdum eget tellus non nibh scelerisque bibendum. Integer posuere erat a ante venenatis dapibus.",
+      "https://lh3.googleusercontent.com/ci/AL18g_RTK9IPNbMGkM0aqysRNGGVdvuGi2p91SJxwjC5ebPCtUFvPbTFBZrJ57x_F1eKA0ivReEfq94=w800",
   },
   {
     id: 3,
-    name: "Sarah Johnson",
-    role: "Product Manager",
+    title: "7 Science Museums to Explore",
+    subtitle: "From Washington D.C. to South Korea",
     image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800",
-    quote:
-      "Auctor aliquet at porttitor a enim nunc suscipit tincidunt nunc. Nulla vitae elit libero, a pharetra augue.",
+      "https://lh3.googleusercontent.com/ci/AL18g_RVXZEYqM0_UTOE4rlQngeM1Rz1UYKB3CAHH7Gz6wG0LIInKeStazubTKWmPgdLMfPHlFtcFnQ=w800",
   },
 ];
 
-const HappyCustomers = () => {
-  const [current, setCurrent] = useState(0);
+export default function EditorialStack() {
+  const [active, setActive] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const touchStartX = useRef(null);
 
-  const prevSlide = () => {
-    setCurrent((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+  /* 🔁 Auto slide */
+  useEffect(() => {
+    if (paused) return;
+    const i = setInterval(() => {
+      setActive((a) => (a + 1) % cards.length);
+    }, 3000);
+    return () => clearInterval(i);
+  }, [paused]);
+
+  /* 📱 Swipe */
+  const onTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
   };
 
-  const nextSlide = () => {
-    setCurrent((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+  const onTouchEnd = (e) => {
+    if (!touchStartX.current) return;
+    const diff = touchStartX.current - e.changedTouches[0].clientX;
+    if (diff > 50) setActive((a) => (a + 1) % cards.length);
+    if (diff < -50)
+      setActive((a) => (a - 1 + cards.length) % cards.length);
+    touchStartX.current = null;
   };
 
   return (
-    <section className="bg-slate-900 py-20 px-6">
-      <div className="mx-auto max-w-6xl relative">
-        <div className="overflow-hidden rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 shadow-xl">
-          {testimonials.map((item, index) => (
+    <div
+      className="w-full bg-gray-100 py-6 overflow-hidden"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onTouchStart={onTouchStart}
+      onTouchEnd={onTouchEnd}
+    >
+      <div className="relative max-w-6xl mx-auto h-[380px] flex items-center justify-center px-3">
+
+        {/* ⬅️ Desktop Arrow */}
+        <button
+          onClick={() =>
+            setActive((a) => (a - 1 + cards.length) % cards.length)
+          }
+          className="hidden md:flex absolute left-2 z-20 bg-white/80 p-3 rounded-full shadow"
+        >
+          ◀
+        </button>
+
+        {/* Cards */}
+        {cards.map((card, index) => {
+          const offset = index - active;
+
+          return (
             <div
-              key={item.id}
-              className={`grid grid-cols-1 md:grid-cols-2 items-center gap-10 p-8 md:p-12 transition-opacity duration-500 ${
-                index === current ? "opacity-100" : "opacity-0 hidden"
-              }`}
+              key={card.id}
+              className="absolute transition-all duration-500"
+              style={{
+                transform:
+                  window.innerWidth < 768
+                    ? `translateX(${offset * 100}%)`
+                    : `translateX(${offset * 140}px) scale(${
+                        offset === 0 ? 1 : 0.85
+                      })`,
+                zIndex: offset === 0 ? 10 : 5,
+                opacity: offset === 0 ? 1 : 0,
+              }}
             >
-              {/* Image */}
-              <img
-                src={item.image}
-                alt={item.name}
-                className="rounded-xl shadow-lg object-cover"
-              />
-
-              {/* Text */}
-              <div className="text-slate-100">
-                <svg
-                  className="h-10 w-10 text-slate-500 mb-4"
-                  fill="currentColor"
-                  viewBox="0 0 32 32"
-                >
-                  <path d="M9.352 4C4.456 8.176 2 12.368 2 16.576 2 22.4 6.272 28 12.608 28c4.16 0 7.392-3.232 7.392-7.392 0-4.048-3.008-7.056-7.056-7.056-.448 0-.896.048-1.344.128.832-2.688 3.072-5.696 6.72-9.056L9.352 4zm14.016 0c-4.896 4.176-7.344 8.368-7.344 12.576C16.024 22.4 20.296 28 26.632 28c4.16 0 7.368-3.232 7.368-7.392 0-4.048-2.984-7.056-7.032-7.056-.448 0-.896.048-1.344.128.832-2.688 3.072-5.696 6.72-9.056L23.368 4z" />
-                </svg>
-
-                <p className="text-lg text-slate-200 leading-relaxed">
-                  {item.quote}
-                </p>
-
-                <div className="mt-6">
-                  <p className="font-semibold text-white">{item.name}</p>
-                  <p className="text-sm text-slate-400">{item.role}</p>
+              <div
+                className="
+                  w-[90vw] sm:w-[80vw] md:w-[320px]
+                  h-[340px]
+                  bg-white rounded-xl overflow-hidden shadow-xl
+                "
+              >
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className="w-full h-[220px] object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold">
+                    {card.title}
+                  </h3>
+                  <p className="text-sm text-gray-600 mt-1">
+                    {card.subtitle}
+                  </p>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
+          );
+        })}
 
-        {/* Controls */}
+        {/* ➡️ Desktop Arrow */}
         <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-slate-800 p-3 text-white hover:bg-slate-700"
+          onClick={() =>
+            setActive((a) => (a + 1) % cards.length)
+          }
+          className="hidden md:flex absolute right-2 z-20 bg-white/80 p-3 rounded-full shadow"
         >
-          ❮
+          ▶
         </button>
-
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-slate-800 p-3 text-white hover:bg-slate-700"
-        >
-          ❯
-        </button>
-
-        {/* Dots */}
-        <div className="mt-6 flex justify-center gap-2">
-          {testimonials.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrent(index)}
-              className={`h-3 w-3 rounded-full ${
-                index === current
-                  ? "bg-white"
-                  : "bg-slate-600 hover:bg-slate-400"
-              }`}
-            />
-          ))}
-        </div>
       </div>
-    </section>
+    </div>
   );
-};
-
-export default HappyCustomers;
+}
+  

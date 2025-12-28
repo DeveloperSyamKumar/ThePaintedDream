@@ -2,8 +2,14 @@ import React, { useState, useEffect, useRef } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 
 // WhatsApp Order Modal Component
-function WhatsAppOrderModal({ product, isOpen, onClose, userInfo, setUserInfo }) {
-  const ADMIN_PHONE = "919030577270"; // replace with your WhatsApp number
+function WhatsAppOrderModal({
+  product,
+  isOpen,
+  onClose,
+  userInfo,
+  setUserInfo,
+}) {
+  const ADMIN_PHONE = "919030577270"
 
   if (!isOpen) return null;
 
@@ -41,7 +47,9 @@ Please let me know the next steps.`;
 
     const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
     const whatsappURL = isMobile
-      ? `whatsapp://send?phone=${ADMIN_PHONE}&text=${encodeURIComponent(message)}`
+      ? `whatsapp://send?phone=${ADMIN_PHONE}&text=${encodeURIComponent(
+          message
+        )}`
       : `https://wa.me/${ADMIN_PHONE}?text=${encodeURIComponent(message)}`;
 
     window.open(whatsappURL, "_blank");
@@ -146,7 +154,9 @@ function ProductCarousel({ images = [], onClick }) {
                   e.stopPropagation();
                   setIndex(i);
                 }}
-                className={`w-2 h-2 rounded-full ${i === index ? "bg-white" : "bg-gray-400"}`}
+                className={`w-2 h-2 rounded-full ${
+                  i === index ? "bg-white" : "bg-gray-400"
+                }`}
                 aria-label={`Go to slide ${i + 1}`}
               />
             ))}
@@ -197,9 +207,9 @@ const Home = () => {
       name: "HAND-MADE GIFT BOX",
       images: [
         "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1763581672/WhatsApp_Image_2025-11-20_at_1.14.47_AM_2_wtoso1.jpg",
-         "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1763581672/WhatsApp_Image_2025-11-20_at_1.14.48_AM_ynvcbh.jpg",
-         "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1763581672/WhatsApp_Image_2025-11-20_at_1.14.47_AM_1_v6bl2l.jpg",
-         "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1763581671/WhatsApp_Image_2025-11-20_at_1.14.47_AM_j7vd6s.jpg",
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1763581672/WhatsApp_Image_2025-11-20_at_1.14.48_AM_ynvcbh.jpg",
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1763581672/WhatsApp_Image_2025-11-20_at_1.14.47_AM_1_v6bl2l.jpg",
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1763581671/WhatsApp_Image_2025-11-20_at_1.14.47_AM_j7vd6s.jpg",
       ],
       price: "N/A",
       details: "CONTACT US for prize details and customization",
@@ -210,47 +220,58 @@ const Home = () => {
     {
       id: 1,
       name: "Mandala Art Key Chains",
-      image: "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999062/IMG-20250926-WA0019_mecorg.jpg",
+      image:
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999062/IMG-20250926-WA0019_mecorg.jpg",
       price: 60,
-      details: "Each keychain costs 60/- rupees and Contact me for more quantity",
+      details:
+        "Each keychain costs 60/- rupees and Contact me for more quantity",
       category: "Key Chains",
     },
     {
       id: 2,
       name: "Key chains",
-      image: "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999062/IMG-20250926-WA0012_elwxfj.jpg",
+      image:
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999062/IMG-20250926-WA0012_elwxfj.jpg",
       price: 59,
-      details: "Each keychain costs 59/- rupees and Contact me for more quantity",
+      details:
+        "Each keychain costs 59/- rupees and Contact me for more quantity",
       category: "Key Chains",
     },
     {
       id: 3,
       name: "Key Chains",
-      image: "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999062/IMG-20250926-WA0009_t228dq.jpg",
+      image:
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999062/IMG-20250926-WA0009_t228dq.jpg",
       price: 59,
-      details: "Each keychain costs 59/- rupees and Contact me for more quantity",
+      details:
+        "Each keychain costs 59/- rupees and Contact me for more quantity",
       category: "Key Chains",
     },
     {
       id: 4,
       name: "Key Chains",
-      image: "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999061/IMG-20250926-WA0011_rfp8ge.jpg",
+      image:
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999061/IMG-20250926-WA0011_rfp8ge.jpg",
       price: 59,
-      details: "Each keychain costs 59/- rupees and Contact me for more quantity",
+      details:
+        "Each keychain costs 59/- rupees and Contact me for more quantity",
       category: "Key Chains",
     },
     {
       id: 5,
       name: "Key Chains",
-      image: "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999061/IMG-20250926-WA0010_b9vvgj.jpg",
+      image:
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999061/IMG-20250926-WA0010_b9vvgj.jpg",
       price: 59,
-      details: "Each keychain costs 59/- rupees and Contact me for more quantity",
+      details:
+        "Each keychain costs 59/- rupees and Contact me for more quantity",
       category: "Key Chains",
     },
     {
       id: 6,
       name: "VINTAGE FRAMES",
-      image: "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999061/IMG-20250926-WA0005_dkcc1h.jpg",
+      image:
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999061/IMG-20250926-WA0005_dkcc1h.jpg",
       price: "N/A",
       details: "CONTACT US for prize details and customization",
       category: "Frames",
@@ -258,31 +279,38 @@ const Home = () => {
     {
       id: 7,
       name: "3D MOON",
-      image: "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999060/IMG-20250926-WA0007_u1kj34.jpg",
+      image:
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999060/IMG-20250926-WA0007_u1kj34.jpg",
       price: 500,
-      details: "3d moon 6inch Wooden wall Moon light lamp Hand crafted 3d moon design",
+      details:
+        "3d moon 6inch Wooden wall Moon light lamp Hand crafted 3d moon design",
       category: "Trending",
     },
     {
       id: 8,
       name: "3D MOON",
-      image: "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999060/IMG-20250926-WA0007_u1kj34.jpg",
+      image:
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999060/IMG-20250926-WA0007_u1kj34.jpg",
       price: 1000,
-      details: "3d moon 12inch Wooden wall Moon light lamp Hand crafted 3d moon design",
+      details:
+        "3d moon 12inch Wooden wall Moon light lamp Hand crafted 3d moon design",
       category: "Trending",
     },
     {
       id: 9,
       name: "3D MOON",
-      image: "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999060/IMG-20250926-WA0007_u1kj34.jpg",
+      image:
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999060/IMG-20250926-WA0007_u1kj34.jpg",
       price: 1250,
-      details: "3d moon 15inch Wooden wall Moon light lamp Hand crafted 3d moon design",
+      details:
+        "3d moon 15inch Wooden wall Moon light lamp Hand crafted 3d moon design",
       category: "Trending",
     },
     {
       id: 10,
       name: "ROUND FRAME",
-      image: "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758912402/WhatsApp_Image_2025-09-26_at_23.59.31_453b090c_ytawq1.jpg",
+      image:
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758912402/WhatsApp_Image_2025-09-26_at_23.59.31_453b090c_ytawq1.jpg",
       price: "N/A",
       details: "CONTACT US for prize details and customization",
       category: "Trending",
@@ -290,7 +318,8 @@ const Home = () => {
     {
       id: 11,
       name: "Square Frame 2",
-      image: "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758912388/WhatsApp_Image_2025-09-26_at_23.59.30_2d1e6a96_gfuosd.jpg",
+      image:
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758912388/WhatsApp_Image_2025-09-26_at_23.59.30_2d1e6a96_gfuosd.jpg",
       price: "N/A",
       details: "CONTACT US for prize details and customization",
       category: "Trending",
@@ -298,7 +327,8 @@ const Home = () => {
     {
       id: 12,
       name: "SQUARE FRAME",
-      image: "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1759010363/WhatsApp_Image_2025-09-26_at_23.59.29_f3fb1a24_glh5iu_e31bec.jpg",
+      image:
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1759010363/WhatsApp_Image_2025-09-26_at_23.59.29_f3fb1a24_glh5iu_e31bec.jpg",
       price: "N/A",
       details: "CONTACT US for prize details and customization",
       category: "Trending",
@@ -318,8 +348,11 @@ const Home = () => {
   }, []);
 
   const prevSlide = () =>
-    setCurrentIndex((prev) => (prev === 0 ? carouselImages.length - 1 : prev - 1));
-  const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % carouselImages.length);
+    setCurrentIndex((prev) =>
+      prev === 0 ? carouselImages.length - 1 : prev - 1
+    );
+  const nextSlide = () =>
+    setCurrentIndex((prev) => (prev + 1) % carouselImages.length);
 
   // Modal & User info state
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -377,7 +410,10 @@ const Home = () => {
     // pinch-to-zoom
     if (e.touches.length >= 2) {
       const [t1, t2] = e.touches;
-      const distance = Math.hypot(t1.clientX - t2.clientX, t1.clientY - t2.clientY);
+      const distance = Math.hypot(
+        t1.clientX - t2.clientX,
+        t1.clientY - t2.clientY
+      );
 
       if (lastDistance.current != null) {
         let delta = distance - lastDistance.current;
@@ -390,7 +426,11 @@ const Home = () => {
     }
 
     // swipe for single touch (only if not zoomed)
-    if (swipeStart.current != null && e.touches.length === 1 && zoomScale === 1) {
+    if (
+      swipeStart.current != null &&
+      e.touches.length === 1 &&
+      zoomScale === 1
+    ) {
       const diff = swipeStart.current - e.touches[0].clientX;
       if (diff > 50) {
         // next
@@ -414,15 +454,20 @@ const Home = () => {
     lastDistance.current = null;
     swipeStart.current = null;
   };
-
   // keyboard nav for enlarged viewer
   useEffect(() => {
     const keyHandler = (e) => {
       if (!enlarged.images || enlarged.images.length === 0) return;
       if (e.key === "ArrowRight") {
-        setEnlarged((prev) => ({ ...prev, index: (prev.index + 1) % prev.images.length }));
+        setEnlarged((prev) => ({
+          ...prev,
+          index: (prev.index + 1) % prev.images.length,
+        }));
       } else if (e.key === "ArrowLeft") {
-        setEnlarged((prev) => ({ ...prev, index: prev.index === 0 ? prev.images.length - 1 : prev.index - 1 }));
+        setEnlarged((prev) => ({
+          ...prev,
+          index: prev.index === 0 ? prev.images.length - 1 : prev.index - 1,
+        }));
       } else if (e.key === "Escape") {
         setEnlarged({ images: [], index: 0 });
         setZoomScale(1);
@@ -474,7 +519,10 @@ const Home = () => {
           >
             {/* If product has images array -> show ProductCarousel, else show single <img> */}
             {Array.isArray(p.images) ? (
-              <ProductCarousel images={p.images} onClick={() => openEnlargedFromProduct(p, 0)} />
+              <ProductCarousel
+                images={p.images}
+                onClick={() => openEnlargedFromProduct(p, 0)}
+              />
             ) : (
               <img
                 src={p.image}
@@ -483,7 +531,6 @@ const Home = () => {
                 onClick={() => openEnlargedFromProduct(p, 0)}
               />
             )}
-
             <h2 className="text-lg font-semibold mt-3">{p.name}</h2>
             <p className="text-gray-700">{p.details}</p>
             <p className="text-green-700 font-bold mt-1">
@@ -535,7 +582,10 @@ const Home = () => {
                 onClick={() =>
                   setEnlarged((prev) => ({
                     ...prev,
-                    index: prev.index === 0 ? prev.images.length - 1 : prev.index - 1,
+                    index:
+                      prev.index === 0
+                        ? prev.images.length - 1
+                        : prev.index - 1,
                   }))
                 }
                 aria-label="Previous image"
@@ -586,7 +636,9 @@ const Home = () => {
                       setEnlarged((prev) => ({ ...prev, index: i }));
                       setZoomScale(1);
                     }}
-                    className={`w-2 h-2 rounded-full ${i === enlarged.index ? "bg-white" : "bg-gray-400"}`}
+                    className={`w-2 h-2 rounded-full ${
+                      i === enlarged.index ? "bg-white" : "bg-gray-400"
+                    }`}
                     aria-label={`Go to image ${i + 1}`}
                   />
                 ))}
@@ -607,6 +659,6 @@ const Home = () => {
       )}
     </div>
   );
-}
+};
 
-export default Home
+export default Home;
