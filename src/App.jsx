@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import Footer from "./components/Footer";
 import Customize from "./components/Customize";
-// import Home from "./components/Home";
 import MobHome from "./mobile/MobHome";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
