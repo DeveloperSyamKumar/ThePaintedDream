@@ -168,7 +168,7 @@ Thank you!`;
             </div>
           </div>
 
-          {/* WhatsApp */}
+         {/* WhatsApp */}
           <a
             href={`https://wa.me/919030577270?text=${encodeURIComponent(
               whatsappMessage
