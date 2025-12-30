@@ -8,7 +8,7 @@ function WhatsAppOrderModal({
   userInfo,
   setUserInfo,
 }) {
-  const ADMIN_PHONE = "919030577270";
+  const ADMIN_PHONE = "919603655683";
   if (!isOpen) return null;
 
   const handleChange = (e) =>

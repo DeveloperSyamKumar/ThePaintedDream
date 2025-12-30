@@ -170,7 +170,7 @@ Thank you!`;
 
          {/* WhatsApp */}
           <a
-            href={`https://wa.me/919030577270?text=${encodeURIComponent(
+            href={`https://wa.me/919603655683?text=${encodeURIComponent(
               whatsappMessage
             )}`}
             target="_blank"

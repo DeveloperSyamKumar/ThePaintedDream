@@ -26,7 +26,7 @@ const Footer = () => {
               <FaInstagram size={22} />
             </a>
             <a
-              href="https://wa.me/919030577270"
+              href="https://wa.me/9603655683"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-700 hover:text-green-600 transition-colors duration-300"
@@ -63,10 +63,10 @@ const Footer = () => {
           {/* <p className="text-gray-700">
             <span className="font-medium">Contact:</span>{" "}
             <a
-              href="tel:+919030577270"
+              href="tel:+9603655683"
               className="text-blue-700 hover:underline"
             >
-              +91 90305 77270
+              +91 9603655683
             </a>
           </p> */}
         </div>

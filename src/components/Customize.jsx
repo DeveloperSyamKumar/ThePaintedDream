@@ -34,7 +34,7 @@ const Customize = () => {
       return;
     }
 
-    const adminNumber = "919030577270"; // Replace with your WhatsApp number
+    const adminNumber = "919603655683"; // Replace with your WhatsApp number
 
     const text = `🎨 *New Custom Art Request* 🎨
 

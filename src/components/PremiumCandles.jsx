@@ -3,7 +3,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 /* ------------------ HELPERS ------------------ */
 
-const ADMIN_PHONE = "919030577270";
+const ADMIN_PHONE = "919603655683";
 
 const getProductImages = (p) =>
   Array.isArray(p?.images) ? p.images : p?.image ? [p.image] : [];
