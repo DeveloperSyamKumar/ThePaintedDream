@@ -83,29 +83,6 @@ function WhatsAppOrderModal({
   );
 }
 
-// --- Sub-Component: Product Carousel ---
-// function ProductCarousel({ images = [], onClick }) {
-//   const [index, setIndex] = useState(0);
-//   useEffect(() => {
-//     if (!images || images.length <= 1) return;
-//     const itv = setInterval(
-//       () => setIndex((prev) => (prev + 1) % images.length),
-//       2500
-//     );
-//     return () => clearInterval(itv);
-//   }, [images]);
-
-//   return (
-//     <div className="relative w-full h-24 sm:h-48 overflow-hidden">
-//       <img
-//         src={images[index]}
-//         className="w-full h-full object-cover cursor-pointer"
-//         onClick={onClick}
-//         alt="product"
-//       />
-//     </div>
-//   );
-// }
 function ProductCarousel({ images = [], onClick }) {
   const [index, setIndex] = useState(0);
 
@@ -162,7 +139,6 @@ function ProductCarousel({ images = [], onClick }) {
 }
 
 
-// --- Main Home Component ---
 const MobHome = () => {
   const carouselImages = [
     "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999063/MAIN_rns2jm.jpg",
