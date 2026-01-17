@@ -232,7 +232,7 @@ const Home = () => {
       name: "Key chains",
       image:
         "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999062/IMG-20250926-WA0012_elwxfj.jpg",
-      price: 69,
+      price:69,
       details:
         "Each keychain costs 69/- rupees and Contact me for more quantity",
       category: "Key Chains",
@@ -242,7 +242,7 @@ const Home = () => {
       name: "Key Chains",
       image:
         "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999062/IMG-20250926-WA0009_t228dq.jpg",
-      price: 69,
+      price:69,
       details:
         "Each keychain costs 69/- rupees and Contact me for more quantity",
       category: "Key Chains",
@@ -252,7 +252,7 @@ const Home = () => {
       name: "Key Chains",
       image:
         "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999061/IMG-20250926-WA0011_rfp8ge.jpg",
-      price: 69,
+      price:69,
       details:
         "Each keychain costs 69/- rupees and Contact me for more quantity",
       category: "Key Chains",
@@ -262,7 +262,7 @@ const Home = () => {
       name: "Key Chains",
       image:
         "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999061/IMG-20250926-WA0010_b9vvgj.jpg",
-      price: 69,
+      price:69,
       details:
         "Each keychain costs 69/- rupees and Contact me for more quantity",
       category: "Key Chains",
@@ -310,7 +310,7 @@ const Home = () => {
       id: 10,
       name: "ROUND FRAME",
       image:
-        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758912402/WhatsApp_Image_2025-09-26_at_23.59.31_453b090c_ytawq1.jpg",
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758912402/WhatsApp_Image_2025-09-26_at_2369.31_453b090c_ytawq1.jpg",
       price: "N/A",
       details: "CONTACT US for prize details and customization",
       category: "Trending",
@@ -319,7 +319,7 @@ const Home = () => {
       id: 11,
       name: "Square Frame 2",
       image:
-        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758912388/WhatsApp_Image_2025-09-26_at_23.59.30_2d1e6a96_gfuosd.jpg",
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758912388/WhatsApp_Image_2025-09-26_at_2369.30_2d1e6a96_gfuosd.jpg",
       price: "N/A",
       details: "CONTACT US for prize details and customization",
       category: "Trending",
@@ -328,7 +328,7 @@ const Home = () => {
       id: 12,
       name: "SQUARE FRAME",
       image:
-        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1759010363/WhatsApp_Image_2025-09-26_at_23.59.29_f3fb1a24_glh5iu_e31bec.jpg",
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v169010363/WhatsApp_Image_2025-09-26_at_2369.29_f3fb1a24_glh5iu_e31bec.jpg",
       price: "N/A",
       details: "CONTACT US for prize details and customization",
       category: "Trending",
