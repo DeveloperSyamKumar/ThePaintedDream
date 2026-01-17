@@ -192,9 +192,9 @@ const MobHome = () => {
       name: "Mandala Art Key Chains",
       image:
         "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999062/IMG-20250926-WA0019_mecorg.jpg",
-      price: 60,
+      price: 69,
       details:
-        "Each keychain costs 60/- rupees and Contact me for more quantity",
+        "Each keychain costs 69/- rupees and Contact me for more quantity",
       category: "Key Chains",
     },
     {
@@ -202,9 +202,9 @@ const MobHome = () => {
       name: "Key chains",
       image:
         "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999062/IMG-20250926-WA0012_elwxfj.jpg",
-      price: 59,
+      price: 69,
       details:
-        "Each keychain costs 59/- rupees and Contact me for more quantity",
+        "Each keychain costs 69/- rupees and Contact me for more quantity",
       category: "Key Chains",
     },
     {
@@ -212,9 +212,9 @@ const MobHome = () => {
       name: "Key Chains",
       image:
         "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999062/IMG-20250926-WA0009_t228dq.jpg",
-      price: 59,
+      price: 69,
       details:
-        "Each keychain costs 59/- rupees and Contact me for more quantity",
+        "Each keychain costs 69/- rupees and Contact me for more quantity",
       category: "Key Chains",
     },
     {
@@ -222,9 +222,9 @@ const MobHome = () => {
       name: "Key Chains",
       image:
         "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999061/IMG-20250926-WA0011_rfp8ge.jpg",
-      price: 59,
+      price: 69,
       details:
-        "Each keychain costs 59/- rupees and Contact me for more quantity",
+        "Each keychain costs 69/- rupees and Contact me for more quantity",
       category: "Key Chains",
     },
     {
@@ -232,9 +232,9 @@ const MobHome = () => {
       name: "Key Chains",
       image:
         "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999061/IMG-20250926-WA0010_b9vvgj.jpg",
-      price: 59,
+      price: 69,
       details:
-        "Each keychain costs 59/- rupees and Contact me for more quantity",
+        "Each keychain costs 69/- rupees and Contact me for more quantity",
       category: "Key Chains",
     },
     {
@@ -280,7 +280,7 @@ const MobHome = () => {
       id: 10,
       name: "ROUND FRAME",
       image:
-        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758912402/WhatsApp_Image_2025-09-26_at_23.59.31_453b090c_ytawq1.jpg",
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758912402/WhatsApp_Image_2025-09-26_at_23.69.31_453b090c_ytawq1.jpg",
       price: "N/A",
       details: "CONTACT US for prize details and customization",
       category: "Trending",
@@ -289,7 +289,7 @@ const MobHome = () => {
       id: 11,
       name: "Square Frame 2",
       image:
-        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758912388/WhatsApp_Image_2025-09-26_at_23.59.30_2d1e6a96_gfuosd.jpg",
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758912388/WhatsApp_Image_2025-09-26_at_23.69.30_2d1e6a96_gfuosd.jpg",
       price: "N/A",
       details: "CONTACT US for prize details and customization",
       category: "Trending",
@@ -298,7 +298,7 @@ const MobHome = () => {
       id: 12,
       name: "SQUARE FRAME",
       image:
-        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1759010363/WhatsApp_Image_2025-09-26_at_23.59.29_f3fb1a24_glh5iu_e31bec.jpg",
+        "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1769010363/WhatsApp_Image_2025-09-26_at_23.69.29_f3fb1a24_glh5iu_e31bec.jpg",
       price: "N/A",
       details: "CONTACT US for prize details and customization",
       category: "Trending",
