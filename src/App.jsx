@@ -8,6 +8,8 @@ import Customize from "./pages/Customize";
 import CandleGallery from "./pages/CandleGallery";
 import HappyCustomers from "./pages/HappyCustomers";
 import LuxuryBirthdayGiftModal from "./features/home/components/LuxuryBirthdayGiftPoster";
+import { CartProvider } from "./context/CartContext";
+import CartModal from "./components/common/CartModal";
 
 const App = () => {
   const [showModal, setShowModal] = useState(false);
@@ -17,7 +19,7 @@ const App = () => {
   }, []);
 
   return (
-    <>
+    <CartProvider>
       <Navbar />
 
       {/* Popup on app start */}
@@ -26,6 +28,8 @@ const App = () => {
         onClose={() => setShowModal(false)}
       />
 
+      <CartModal />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/customize" element={<Customize />} />
@@ -33,7 +37,7 @@ const App = () => {
         <Route path="/happyCustomers" element={<HappyCustomers />} />
       </Routes>
       <Footer />
-    </>
+    </CartProvider>
   );
 };
 

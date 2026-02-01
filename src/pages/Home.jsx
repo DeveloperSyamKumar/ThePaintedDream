@@ -1,6 +1,7 @@
 import React, { useState, useEffect,  } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
+import { useCart } from "../context/CartContext";
 
 function WhatsAppOrderModal({
   product,
@@ -140,7 +141,10 @@ function ProductCarousel({ images = [], onClick }) {
 }
 
 
+
+
 const Home = () => {
+    const { addToCart, toggleCart } = useCart();
   const carouselImages = [
     "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999063/MAIN_rns2jm.jpg",
     "https://res.cloudinary.com/dmyu5kjzs/image/upload/v1758999060/0002_ophrkn.jpg",
@@ -440,15 +444,25 @@ const nextHero = () =>
                   {p.price === "N/A" ? "Contact us" : `₹${p.price}`}
                 </p>
 
-                <button
-                  onClick={() => {
-                    setSelectedProduct(p);
-                    setIsModalOpen(true);
-                  }}
-                  className="mt-auto w-full bg-green-600 text-white text-[10px] sm:text-xs py-1.5 rounded flex items-center justify-center gap-1 active:scale-95 transition"
-                >
-                  <FaWhatsapp /> Order
-                </button>
+                <div className="flex gap-2 mt-auto">
+                  <button
+                    onClick={() => addToCart(p)}
+                    className="flex-1 bg-red-600 text-white text-[10px] sm:text-xs py-1.5 rounded flex items-center justify-center gap-1 active:scale-95 transition hover:bg-red-700"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    onClick={() => {
+                        addToCart(p);
+                        toggleCart(true);
+                      // setSelectedProduct(p);
+                      // setIsModalOpen(true);
+                    }}
+                    className="flex-1 bg-green-600 text-white text-[10px] sm:text-xs py-1.5 rounded flex items-center justify-center gap-1 active:scale-95 transition hover:bg-green-700"
+                  >
+                    <FaWhatsapp /> Order
+                  </button>
+                </div>
               </div>
             </div>
           ))}

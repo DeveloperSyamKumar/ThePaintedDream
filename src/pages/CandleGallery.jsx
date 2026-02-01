@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback, memo } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
+import { useCart } from "../context/CartContext";
 
 /* ------------------ HELPERS ------------------ */
 
@@ -142,7 +143,10 @@ const ProductCarousel = memo(({ images, onClick, altText }) => {
 
 /* ------------------ MAIN COMPONENT ------------------ */
 
+
+
 const  CandleGallery = ()  =>{
+  const { addToCart, toggleCart } = useCart();
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -330,12 +334,24 @@ const  CandleGallery = ()  =>{
               <h2 className="mt-3 font-semibold">{p.name}</h2>
               <p className="text-sm text-gray-700">{p.details}</p>
 
-              <button
-                onClick={() => openModal(p)}
-                className="mt-4 w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded flex justify-center gap-2"
-              >
-                <FaWhatsapp /> Order on WhatsApp
-              </button>
+              <div className="mt-4 flex gap-2">
+                <button
+                  onClick={() => addToCart(p)}
+                   className="flex-1 bg-red-600 hover:bg-red-700 text-white py-2 rounded transition font-medium text-sm"
+                >
+                  Add to Cart
+                </button>
+                <button
+                  onClick={() => {
+                      addToCart(p);
+                      toggleCart(true);
+                    // openModal(p)
+                  }}
+                  className="flex-1 bg-green-600 hover:bg-green-700 text-white py-2 rounded flex justify-center gap-2 items-center text-sm font-medium"
+                >
+                  <FaWhatsapp /> Order
+                </button>
+              </div>
             </div>
           );
         })}
