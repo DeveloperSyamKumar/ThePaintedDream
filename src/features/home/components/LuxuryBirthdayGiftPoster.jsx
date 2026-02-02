@@ -19,6 +19,13 @@ export default function LuxuryBirthdayGiftModal({ isOpen, onClose }) {
     }
   }, [isOpen]);
 
+  useEffect(() => {
+    if (isOpen) {
+      const timer = setTimeout(onClose, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [isOpen, onClose]);
+
   if (!isOpen) return null;
 
   const prev = () => setIndex((index - 1 + images.length) % images.length);
@@ -74,15 +81,15 @@ Thank you!`;
         onClick={(e) => e.stopPropagation()}
         className="relative w-full max-w-sm rounded-2xl overflow-hidden border border-yellow-400/30 shadow-2xl bg-gradient-to-b from-[#1a1208] to-[#0f0b06]"
       >
-        {/* Close */}
+
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 text-white text-2xl z-10"
+          className="absolute top-3 right-3 text-red-600 text-2xl z-10"
         >
           ✕
         </button>
 
-        {/* Header */}
+
         <div className="text-center p-5 bg-gradient-to-r from-yellow-400 to-yellow-200 text-[#1a1208]">
           <h1 className="text-xl font-bold">Luxury Birthday Gift Box</h1>
           <p className="text-xs font-medium mt-1">
@@ -90,7 +97,7 @@ Thank you!`;
           </p>
         </div>
 
-        {/* Image */}
+
         <div className="relative flex items-center justify-center p-4">
           <img
             src={images[index]}
@@ -116,9 +123,9 @@ Thank you!`;
           </button>
         </div>
 
-        {/* Options */}
+
         <div className="px-4 pb-4 space-y-3">
-          {/* Pre-Loaded */}
+
           <div
             onClick={() => setSelectedOption("preloaded")}
             className={`flex items-start gap-3 cursor-pointer rounded-xl border p-3 transition ${
@@ -143,7 +150,6 @@ Thank you!`;
             </div>
           </div>
 
-          {/* Customized */}
           <div
             onClick={() => setSelectedOption("customized")}
             className={`flex items-start gap-3 cursor-pointer rounded-xl border p-3 transition ${
@@ -168,7 +174,7 @@ Thank you!`;
             </div>
           </div>
 
-         {/* WhatsApp */}
+
           <a
             href={`https://wa.me/919603655683?text=${encodeURIComponent(
               whatsappMessage
