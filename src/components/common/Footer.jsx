@@ -60,19 +60,7 @@ const Footer = () => {
               thepainteddream2025@gmail.com
             </a>
           </p>
-          {/* <p className="text-gray-700">
-            <span className="font-medium">Contact:</span>{" "}
-            <a
-              href="tel:+9603655683"
-              className="text-blue-700 hover:underline"
-            >
-              +91 9603655683
-            </a>
-          </p> */}
-        </div>
-
-
-      {/* Bottom Section */}
+          
      
     </footer>
   );
