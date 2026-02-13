@@ -5,16 +5,14 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-b from-blue-100 to-blue-200 text-gray-800 mt-10">
       <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        
         {/* Logo & About */}
         <div className="sm:col-span-2">
           <h1 className="text-xl font-bold text-blue-800 mb-2">
             The Painted Dream 🎨
           </h1>
           <p className="text-xs text-gray-700 leading-relaxed">
-            Handcrafted art that speaks to your soul.
-            From custom paintings to unique frames —
-            every creation is made with love and imagination.
+            Handcrafted art that speaks to your soul. From custom paintings to
+            unique frames — every creation is made with love and imagination.
           </p>
 
           <div className="mt-4 flex space-x-4">
@@ -64,9 +62,9 @@ const Footer = () => {
             </a>
           </p>
         </div>
-
-      </div> {/* close grid div */}
-    </footer>  {/* close footer */}
+      </div>{" "}
+      {/* close grid div */}
+    </footer>
   );
 };
 
