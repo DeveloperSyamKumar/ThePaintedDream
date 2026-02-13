@@ -60,7 +60,7 @@ const Footer = () => {
               thepainteddream2025@gmail.com
             </a>
           </p>
-          
+        </div>
      
     </footer>
   );
