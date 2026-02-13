@@ -71,29 +71,6 @@ const Footer = () => {
           </p> */}
         </div>
 
-        /* {/* Developer Details */}
-        <div>
-          <h2 className="text-base font-semibold text-blue-900 mb-2">Developer</h2>
-          <p className="text-gray-700">
-            <span className="font-medium">Name:</span> Syam Kumar G
-          </p>
-          <p className="text-gray-700">
-            <span className="font-medium">Role:</span> Full Stack Developer
-          </p>
-          
-          <p className="text-gray-700">
-            <span className="font-medium">Email:</span>{" "}
-            <a
-              href="mailto:syamkumargorli2002@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-700 hover:underline"
-          >
-              syamkumargorli2002@gmail.com
-            </a>
-          </p>
-        </div>
-      </div> */
 
       {/* Bottom Section */}
       <div className="border-t border-blue-300 py-2 text-center text-xs text-gray-700">
