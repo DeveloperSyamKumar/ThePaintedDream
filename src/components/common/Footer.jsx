@@ -1,5 +1,5 @@
 import React from "react";
-import { FaInstagram, FaWhatsapp, FaEnvelope, FaFacebook, FaGlobe } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -12,30 +12,33 @@ const Footer = () => {
             The Painted Dream 🎨
           </h1>
           <p className="text-xs text-gray-700 leading-relaxed">
-            Handcrafted art that speaks to your soul. 
-            From custom paintings to unique frames — 
+            Handcrafted art that speaks to your soul.
+            From custom paintings to unique frames —
             every creation is made with love and imagination.
           </p>
+
           <div className="mt-4 flex space-x-4">
             <a
-              href="https://www.instagram.com/thepainteddream2025?igsh=dG9ydGx0ZzNzOWdq_"
+              href="https://www.instagram.com/thepainteddream2025"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-700 hover:text-pink-600 transition-colors duration-300"
+              className="text-gray-700 hover:text-pink-600"
             >
               <FaInstagram size={22} />
             </a>
+
             <a
               href="https://wa.me/9603655683"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-700 hover:text-green-600 transition-colors duration-300"
+              className="text-gray-700 hover:text-green-600"
             >
               <FaWhatsapp size={22} />
             </a>
+
             <a
               href="mailto:thepainteddream@gmail.com"
-              className="text-gray-700 hover:text-blue-600 transition-colors duration-300"
+              className="text-gray-700 hover:text-blue-600"
             >
               <FaEnvelope size={22} />
             </a>
@@ -45,13 +48,13 @@ const Footer = () => {
         {/* Artist Details */}
         <div>
           <h2 className="text-base font-semibold text-blue-900 mb-2">Artist</h2>
-          <p className="text-gray-700">
+          <p>
             <span className="font-medium">Name:</span> Ms. Aishwarya
           </p>
-          <p className="text-gray-700">
+          <p>
             <span className="font-medium">Specialty:</span> Mandala & Custom Art
           </p>
-          <p className="text-gray-700">
+          <p>
             <span className="font-medium">Email:</span>{" "}
             <a
               href="mailto:thepainteddream2025@gmail.com"
@@ -61,8 +64,9 @@ const Footer = () => {
             </a>
           </p>
         </div>
-     
-    </footer>
+
+      </div> {/* close grid div */}
+    </footer>  {/* close footer */}
   );
 };
 
