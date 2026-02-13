@@ -73,18 +73,7 @@ const Footer = () => {
 
 
       {/* Bottom Section */}
-      <div className="border-t border-blue-300 py-2 text-center text-xs text-gray-700">
-        © {new Date().getFullYear()} The Painted Dream. All rights reserved. |
-        Developed with ❤️ by{" "}
-        <a
-          href="https://github.com/SyamKumarG"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-700 font-medium hover:underline"
-        >
-          Syam Kumar G
-        </a>
-      </div>
+     
     </footer>
   );
 };
